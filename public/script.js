@@ -2,8 +2,8 @@ document.getElementById('openChitButton').addEventListener('click', function() {
   const employeeId = prompt('Please enter your employee ID:'); // Prompt for ID
   
   if (employeeId) {
-    // Send ID to backend and process the result
-    fetch(`http://localhost:3000/pick-chit?id=${encodeURIComponent(employeeId)}`)
+    // Update the URL to your Vercel backend API
+    fetch(`https://your-project-name.vercel.app/api/pick-chit?id=${encodeURIComponent(employeeId)}`)
       .then(response => {
         if (!response.ok) {
           return response.text().then(text => { throw new Error(text); });
@@ -18,3 +18,4 @@ document.getElementById('openChitButton').addEventListener('click', function() {
       });
   }
 });
+
