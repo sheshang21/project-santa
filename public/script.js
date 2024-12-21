@@ -3,7 +3,7 @@ document.getElementById('openChitButton').addEventListener('click', function() {
   
   if (employeeId) {
     // Update the URL to your Vercel backend API
-    fetch(`https://your-project-name.vercel.app/api/pick-chit?id=${encodeURIComponent(employeeId)}`)
+    fetch(`https://project-santa-nq1bq1a1o-sheshangs-projects.vercel.app/api/pick-chit?id=${encodeURIComponent(employeeId)}`)
       .then(response => {
         if (!response.ok) {
           return response.text().then(text => { throw new Error(text); });
